@@ -1,5 +1,6 @@
 package com.test.book.springboot.domain.posts;
 
+import com.test.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter //getter 자동 생성
 @NoArgsConstructor //기본 생성자 추가 Posts(){}
 @Entity //테이블과 링크될 클래스 ==> SalesManager.java -> sales_manager table로 인식
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id //PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성 규칙 : auto_increment
